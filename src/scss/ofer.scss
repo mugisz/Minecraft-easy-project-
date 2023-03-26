@@ -1,0 +1,23 @@
+.oferta{
+	&-first{
+		margin-top: 5rem;
+		.title_shop-dog{
+			padding-bottom: 0;
+		}
+		ul{
+			.usl{
+				margin: 10px 1rem 0;
+				list-style: none;
+				color: #8A94A7;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 27px;
+			}
+			.fusl{
+				font-size: 22px;
+				line-height: 27px;
+				margin: 1rem 0;
+			}
+		}
+	}
+}

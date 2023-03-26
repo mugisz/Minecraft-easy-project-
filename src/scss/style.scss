@@ -1,0 +1,252 @@
+@import "header.scss";  
+@import "main.scss"; 
+@import "donat.scss";
+@import "ofer.scss";
+@import "footer.scss"; 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.container{
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+	overflow: hidden;
+	@media (max-width:1200px){
+		max-width: 970px;
+	}
+	@media (max-width:960px){
+		max-width: none;
+		padding: 0 30px;
+	}
+}
+a{
+	text-decoration: none;
+}
+
+main{
+	z-index: 2;
+}
+html,body{
+	height: 100%;
+	font-family: Montserrat;
+	background-color: #13151a;
+	.wrapper{
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		main{
+			flex:1 1 auto;
+		}
+	}
+}
+@media (min-width:640px){
+	.responsive_header{
+		display: none;
+	}
+	.link-underSt{
+		&::after{
+			content: "";
+			display: block;
+			width: 0;
+			height: 2px;
+			position:relative;
+			bottom: -10px;
+			background:white;
+			transition:width .4s;
+			
+		}
+		&:hover::after{
+			color:white;
+			width: 100%;
+		}
+	}
+
+	
+}
+@media (max-width:640px) {
+	.logo_header{
+		display: none;
+	}
+	.header_first-section{
+		position:absolute;
+		width: 100%;
+		height: 100vh;
+		
+		background-color: #13151a;
+		
+		z-index: 10;
+		
+		left:-100%;
+		transition: .6s;
+		
+		.nav{
+			display: block;
+			align-items: center;
+			left:-100%;
+			padding-left: .5rem;
+			
+			.menu{
+				display:flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 100%;
+				height: 100%;
+				.header_links{
+					position: relative;
+					z-index: 10;
+					color:white;
+					font-size: 20px;
+					line-height: 42px;
+					&::after{
+						content: "";
+						bottom: 0;
+						display:inline-block;
+						height: 1px;
+						width: 100vw;
+						background: #3D3D3D;
+					}
+				}
+			}
+		}
+	}
+	.header_first-section.active{
+		left:0;
+	}
+	.header_main-section{
+		z-index: 2;
+	}
+	.responsive_header{
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content:space-between;
+		z-index: 50;
+		background:  #13151a;
+		height: 80px;
+		box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.15);
+		
+	}
+	.burger_menu{
+		border: 0;
+		position: relative;
+		width: 4rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background-color:transparent;
+		z-index: 10;
+		background-color: #085aa7;
+		height: 100%;
+		.line{
+			z-index: 2;
+			width: 50%;
+			position: relative;
+			background-color: white;
+			height: 4px;
+			border-radius: 10px;
+		
+			&::after,&::before{
+				border-radius: 10px;
+				content: "";
+				width: 100%;
+				position: absolute;
+				left:0;
+				background-color:  white;
+				height: 4px;
+				display: inline-block;
+				transition: .4s;
+			}
+			&::after{
+				top:.6rem;
+			}
+			&::before{
+				top:-.6rem;
+			}
+		}
+	}
+	.burger_menu.active{
+	
+		.line{
+			background-color: transparent;
+			transition: .4s;
+			&::before,&::after{
+				top:0rem;
+				transition: .4s;
+			}
+			&::before{
+				transform: rotate(45deg);
+			}
+			&::after{
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	.adp_logo{
+		width: 250px;
+		height: 70px;
+		display: block;
+		margin: 0 auto;
+		@media (max-width:375px){
+			width: 220px;
+			height: 60px;
+		}
+	}
+	.img_block{
+		display: none;
+	}
+}
+.title_shop-dog{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5rem;
+	margin: 0 auto;
+	@media(max-width:810px){
+		width: 100%;
+
+	}
+	
+	span{
+		font-weight: bold;
+		color:#097dea;
+	}
+	h2{
+		font-weight:500;
+		font-size: 36px;
+		line-height: 46px;
+		text-align: center;
+		letter-spacing: 0.03em;
+		
+		color: #FFFFFF;
+		margin-bottom: 1rem;
+		@media(max-width:375px){
+			text-align: start;
+			
+		}
+	}
+	.confisencTitle{
+		@media(max-width:460px){
+			font-size: 28px;
+			
+		}
+		@media(max-width:320px){
+			font-size: 26px;
+			
+		}
+	}
+	p{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: 0.03em;
+		color: #8A94A7;
+		text-align: center;
+		@media(max-width:375px){
+			text-align: start;
+			
+		}
+	}
+}
+//----------------
